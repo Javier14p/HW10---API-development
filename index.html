@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gardería Brujitas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+</head>
+<body >
+<div >
+    <!--NAV-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Guaderia</a>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li>
+                <form id="signInForm">
+                    <input type="email" id="emailInput" placeholder="Correo electrónico">
+                    <input type="password" id="passwordInput" placeholder="Contraseña">
+                    <button id="signInBtn">Iniciar sesión</button>
+                </form>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <span id="userInfo"></span>
+            <button id="signOutBtn" style="display: none;">Desloguearse</button>
+          </form>
+        </div>
+      </nav>
+    
+    
+    <!-- <span id="userInfo"></span>
+    <button id="signOutBtn" style="display: none;">Desloguearse</button>
+    <a href="sistem.html" id="redirectToOtherHtml" style="display: none;">Ir a otra página</a> -->
+
+
+    <!--PRIMERA PARTE-->
+    <section id="banner">
+            <p>¡Juguemos, Aprendamos</p>
+            <p>Y</p>
+            <p>Crezcamos juntos!</p>	
+    </section>
+  
+    <!--SEGUNDA PARTE-->
+    <!-- Main -->
+    <section id="main" class="container" >
+        <!-- Header -->
+        <section class="box special" id="box-blob">
+            <h2>
+                ¿Buscas el mejor lugar para tus hijos?</h2>
+
+            <div class="blob-image-children"> 
+                <img src="img/2blob.png" alt="Niños" class="img-blob-box">
+            </div>
+
+            <div>
+                <header class="major">
+                    <p id="first-p-major">¡Te esperamos en <b style="color: white">Estancia Infantil Brujitas!</b> <br/> Te frecemos el mejor servicio de guardería</p>
+                    <br>
+                    <p id="second-p-major">¡Deja que pase las mejores horas del día!</p>
+                    <br />
+                </header>
+            </div>
+            
+        </section>
+
+        <!-- TERCERA PARTE -->
+        <h1 class="h1-titles-section">Servicios</h1>
+        <section id="Servicios" class="box special features">
+        
+            <section class="section-actividades" id="sec-act">
+                <div class="div-act-img" >
+                    <span class="image featured"><img src="img/actividades.png" alt="" /></span>
+                </div>
+                
+                <h3 class="h3-act">Actividades</h3>
+                <p class="p-act">Actividades lúdicas y recreativas que potencializan el sano desarrollo de los niños.</p>
+            
+            </section>
+
+            <section class="section-actividades" id="sec-act">
+                <div class="div-act-img">
+                    <span class="image featured"><img src="img/autorregulacion.png" alt="" /></span>
+                </div>
+                <h3 class="h3-act">Estimulación temprana</h3>
+                <p class="p-act">Estimulación temprana para los más pequeños.</p>
+            </section>
+        
+            <section class="section-actividades" id="sec-act">
+                <div class="div-act-img">
+                    <span class="image featured"><img src="img/comida-sana.png" alt="" /></span>
+                </div>
+                <h3 class="h3-act">Alimentos</h3>
+                <p class="p-act">Alimentos balanceados en 3 momentos al día.</p>
+            </section>
+
+            <section class="section-actividades" id="sec-act">
+                <div class="div-act-img">
+                    <span class="image featured"><img src="img/calendario.png" alt="" /></span>
+                </div>
+                <h3 class="h3-act">Horario</h3>
+                <p class="p-act">7:30 AM a 3:30 PM - Lunes a Sabado</p>
+            </section>
+        
+            <section class="section-actividades" id="sec-act">
+                <div class="div-act-img" >
+                    <span class="image featured"><img src="img/grupo-de-edad.png" alt="" /></span>
+                </div>
+                
+                <h3 class="h3-act">Edades atendidas</h3>
+                <p class="p-act">1 - 4 años</p>
+            </section>
+
+            <section class="section-actividades" id="sec-act">
+                <div class="div-act-img">
+                    <span class="image featured"><img src="img/proteger.png" alt="" /></span>
+                </div>
+                <h3 class="h3-act">Personal Capacitado</h3>
+                <p class="p-act">Contamos con personal capacitado para el cuidado de tus hijos.</p>
+            </section>
+        
+    </section>
+
+    
+    <button id="newPostBtn" type="button" class="btn btn-primary" style="margin: 1rem auto;">Crear nuevo post</button>
+
+<section id="posts" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); gap: 2rem; justify-items: center;">
+    <!-- Aquí se mostrarán las publicaciones de la guardería -->
+</section>
+
+
+<!-- Modal para crear un nuevo post -->
+<div id="createPostModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Nuevo Post</h2>
+
+        
+        <form id="postForm" enctype="multipart/form-data">
+            <label for="titulo">Título:</label>
+            <div class="input-group mb-3">
+                <input type="text" id="titulo" name="titulo" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
+            </div>
+
+            <label for="cuerpo">Cuerpo:</label>
+            <div class="input-group">
+                <textarea class="form-control" aria-label="With textarea" id="cuerpo" name="cuerpo" required></textarea>
+            </div>
+
+
+
+            <label for="tipo">Tipo:</label>
+            <div class="input-group mb-3">
+                <select class="custom-select" id="tipo" name="tipo">
+                  <option selected>Escoge...</option>
+                  <option value="Informativo">Informativo</option>
+                  <option value="Marketing">Marketing</option>
+                  <option value="General">General</option>
+                </select>
+              </div>
+
+            
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Imagen</span>
+                </div>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="imagen" name="imagen">
+                  <label class="custom-file-label">Choose file</label>
+                </div>
+              </div>
+            
+            <!-- <label for="imagen">Imagen:</label>
+            <input type="file" id="imagen" name="imagen"> -->
+
+            <button id="createPostBtn" type="button" class="btn btn-primary">Crear Post</button>
+        </form>
+        
+
+    </div>
+</div>
+
+<!-- Modal para confirmar eliminación -->
+<div id="deletePostModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn-delete">&times;</span>
+      <h2>Eliminar Post</h2>
+      <p>¿Estás seguro de que deseas eliminar esta publicación?</p>
+      <button id="confirmDeleteBtn" type="button" class="btn btn-warning" style="margin-bottom: 1rem;">Confirmar</button>
+      <button onclick="closeDeleteModal()" type="button" class="btn btn-secondary">Cancelar</button>
+    </div>
+</div>
+
+<!-- Modal para editar un post -->
+<div id="editPostModal" class="modal" style="margin: auto;">
+    
+
+    <div class="modal-content">
+        <span class="close-btn-edit">&times;</span>
+        <h2>Editar Post</h2>
+        
+        <label for="editTitulo">Título:</label>
+        <div class="input-group mb-3">
+            <input type="text" id="editTitulo" name="editTitulo" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
+        </div>
+
+        <label for="editCuerpo">Cuerpo:</label>
+        <div class="input-group">
+            <textarea class="form-control" aria-label="With textarea" id="editCuerpo" name="editCuerpo" required></textarea>
+        </div>
+
+        <label for="editTipo">Tipo:</label>
+        <div class="input-group mb-3">
+            <select class="custom-select" id="editTipo" name="tipo">
+              <option selected>Escoge...</option>
+              <option value="Informativo">Informativo</option>
+              <option value="Marketing">Marketing</option>
+              <option value="General">General</option>
+            </select>
+        </div>
+
+        <label for="editFecha">Fecha:</label>
+        <input type="date" id="editFecha" name="fecha" required>
+        
+        <label for="editImagen">Imagen:</label>
+        <img id="previewImagen" src="" alt="Vista previa de la imagen" style="width: 50px; height: 50px;">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Imagen</span>
+            </div>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="editImagen" name="editImagen">
+              <label class="custom-file-label">Choose file</label>
+            </div>
+          </div>
+        
+        <label for="editImagen">Actualizar solo titulo:</label>
+        <button id="updateTitleBtn">Actualizar solo el título</button>
+        
+        <button id="updatePostBtn">Actualizar Post</button>
+    </div>
+</div>
+
+
+    <!--INSTAGRAM-->
+    <!-- Social Networks-->
+    <h1 class="h1-titles-section">¡Síguenos en nuestras redes sociales!</h1>
+
+    <section class="box special features" id="careers">
+        <div class="features-row">
+            <div data-mc-src="098a436a-bfd9-4fb6-b2a7-950d7a0e4dc7#instagram" style="z-index: 1;" ></div>
+            <div class="oc-pub">s</div>
+            <script 
+                src="https://cdn2.woxo.tech/a.js#635903a279d941ac6ed8fff3" 
+                async data-usrc>
+            </script>
+
+    </section>
+
+    <!-- Protocols part-->
+    <section class="box special features" id="protocolos">
+        <div style="width: 100%;">
+
+            <section class="box special" id="protocolos-box">
+                        <h3 class="h3-protocolos-box">Protocolos de prevención en las instalaciónes</h3>
+                        <h5 class="h5-protocolos-box">Como consecuencia de la situación sanitaria que estamos viviendo, hemos implementado una serie de medidas de prevención que te darán la confianza de visitarnos.</h5>
+                    <div class="prevent-al">
+                        <div style="margin: auto;">
+                            <img src="img/protocolo.png" alt="" style="width: 10rem;">
+                        </div>							
+                    <div>
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item" id="list-group-protocolos">Toma de temperatura a la entrada.</li>
+                            <li class="list-group-item" id="list-group-protocolos">Sana distancia.</li>
+                            <li class="list-group-item" id="list-group-protocolos">Evitaciónes de aglomeraciones.</li>
+                            <li class="list-group-item" id="list-group-protocolos">Aula completamente sanitizada.</li>
+                        </ol>
+                    </div>
+                    <div style="margin: auto;">
+                            <img src="img/desinfection.png" alt="" style="width: 10rem;">
+                    </div>
+                    </div>
+            </section>
+        </div>
+    </section>
+
+        <!-- Location part -->
+        <section id="cta" class="cta-location" style="background-color: #BB83DE; position: relative; z-index: 50; height: 46rem;">
+            <h1 class="h1-cta-location">Nuestra ubicación:</h1>	
+            <div class="box special features" id="Ubicacion">
+                <div class="features-row">
+                    <section>
+                        <div class="mapouter"><div class="gmap_canvas" id="map-ca"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Paloma 400, Real del Mezquital, Durango, Dgo.&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://piratebay-proxys.com/">Pirate proxy</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
+                    </section>
+                    <section>
+                        <div>
+                            <h4 style="color: white; background-color: #8000803b; border-radius: 2rem;">Teléfonos:</h4>
+                            <div>
+                                <a href="https://wa.me/6183634429?text=Hola!%20Estoy%20interesado%20en%20tu%20servicio." target="_blank"><p style="color: white"><img src="img/whatsapp.png" alt="" class="img-location-text-index">618-363-44-29</p></a>
+                                
+                            </div>
+                            <div>
+                                <a href="https://wa.me/6181662267?text=Hola!%20Estoy%20interesado%20en%20tu%20servicio." target="_blank"><p style="color: white"><img src="img/whatsapp.png" alt="" class="img-location-text-index">618-166-22-67</p></a>
+                            <hr>
+                            <h4 style="color: white; background-color: #8000803b; border-radius: 2rem;">Correo Electrónico:</h4>
+                            <div>
+                                <a href="mailto:marinsarmiento64@gmail.com?Subject=Contacto%20Estancia" target="_blank"><p style="color: white"><img src="img/correo-electronico.png" alt="" class="img-location-text-index">marinsarmiento64@gmail.com</p></a>
+                            </div>
+                            <hr>
+                            <h4 style="color: white; background-color: #8000803b; border-radius: 2rem;">Dirección:</h4>
+                            <div>
+                                <a href="https://www.google.com/maps/place/Paloma+400,+Real+del+Mezquital,+Durango,+Dgo.,+Mexico/@23.9978235,-104.6505969,18.92z/data=!4m5!3m4!1s0x869bb8038feb1c79:0x960c82ee7afb8284!8m2!3d23.9975966!4d-104.6505228?hl=en" target="_blank"><p style="color: white"><img src="img/ubicacion-pos.png" alt="" class="img-location-text-index">Calle Paloma #400 Fracc.</p></a>
+                                
+                            </div>
+                            <hr>
+                            <h4 style="color: white">¡Inscripciónes abiertas!</h4>
+                        </div>
+                    </section>
+                </div>
+            </div>
+    </section>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="https://www.facebook.com/estanciainfantilbrujitas" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/guarderia_brujitas/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+            </ul>
+        <ul class="copyright">
+            <li>&copy;  All rights reserved. 2022 · Estancia Infantil "Brujitas" · </li>
+        </ul>
+    </footer>
+    </section>
+
+<script type="module" src="js/firebase.js"></script>
+<script type="module" src="js/main.js"></script>
+    
+
+
+</body>
+</html>
